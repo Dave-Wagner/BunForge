@@ -6,13 +6,13 @@ import Logger from "@/services/logger";
 // Create a default logger instance for icon-related logging.
 const iconLogger = new Logger({ type: "console" });
 
-// Mapping for supported icon sets.
-// This makes the dynamic import predictable for Vite.
+// Static mapping for supported icon sets.
+// also update this in the vite.config.js
 const iconSets = {
   fa: () => import("react-icons/fa"),
   md: () => import("react-icons/md"),
   gi: () => import("react-icons/gi"),
-  // Add more icon sets here if needed.
+  si: () => import("react-icons/si"),
 };
 
 /**
@@ -25,7 +25,7 @@ const iconCache = new Map();
 /**
  * Dynamically import and cache the desired icon from react-icons.
  *
- * @param {string} iconSet - The icon set to import from (e.g., "fa", "md").
+ * @param {string} iconSet - The icon set to import from (e.g., "fa", "md", "gi", "si").
  * @param {string} iconName - The name of the icon (e.g., "FaBeer").
  * @returns {React.LazyExoticComponent<React.ComponentType<any>>} The lazy-loaded icon component.
  */
@@ -35,7 +35,6 @@ const getCachedIcon = (iconSet, iconName) => {
     iconLogger.log("debug", `Icon cache hit for ${cacheKey}`);
     return iconCache.get(cacheKey);
   }
-
   const loadIconSet = iconSets[iconSet];
   if (!loadIconSet) {
     throw new Error(`Icon set "${iconSet}" is not supported.`);
@@ -64,7 +63,7 @@ const getCachedIcon = (iconSet, iconName) => {
  * Generic Icon component that dynamically imports icons from react-icons.
  *
  * @param {Object} props - The props for the Icon component.
- * @param {string} props.iconSet - The icon set to load from (e.g., "fa", "md", "gi").
+ * @param {string} props.iconSet - The icon set to load from (e.g., "fa", "md", "gi", "si").
  * @param {string} props.iconName - The name of the icon to import (e.g., "FaBeer").
  * @param {number|string} [props.size] - The size of the icon.
  * @param {React.CSSProperties} [props.style] - Inline styles to apply to the icon.

@@ -11,6 +11,6 @@ export default defineConfig({
   },
   optimizeDeps: {
     // Pre-bundle the icon sets you plan to use.
-    include: ["react-icons/fa", "react-icons/md", "react-icons/gi"]
+    include: ["react-icons/fa", "react-icons/md", "react-icons/gi", "react-icons/si"],
   },
 });

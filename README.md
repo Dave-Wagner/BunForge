@@ -65,7 +65,7 @@ Development Server:
 bun run dev
 ```
 
-Open your browser at [localhost](http://localhost:3000) to see a working example app
+Open your browser at [localhost](http://localhost:5173) to see a working example app
 
 Production Build:
 

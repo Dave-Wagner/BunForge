@@ -27,6 +27,7 @@ const NewsExplorer = () => {
   }, []);
 
   // Debounced search function to fetch articles from Hacker News
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchArticles = useCallback(
     debounce(async (searchQuery) => {
       setLoading(true);

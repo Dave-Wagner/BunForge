@@ -98,7 +98,7 @@ export const mergeObjects = (target, ...sources) => {
     sources.forEach((source) => {
         // Iterate over each key in the source object.
         for (let key in source) {
-            if (source.hasOwnProperty(key)) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
                 // If the value is an object, merge recursively.
                 if (typeof source[key] === 'object' && source[key] !== null) {
                     target[key] = mergeObjects(target[key] || {}, source[key]);

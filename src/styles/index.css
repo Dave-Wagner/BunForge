@@ -1,0 +1,123 @@
+/* Define color variables based on the base color */
+:root {
+    --base-color: #4287f5;
+    --base-color-light: #6aaefb;
+    /* Lighter shade */
+    --base-color-lighter: #8dc5fd;
+    /* Even lighter shade */
+    --base-color-dark: #3073d1;
+    /* Darker shade */
+    --base-color-darker: #245db8;
+    /* Even darker shade */
+
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --border-color: #ddd;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Global Reset & Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--base-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Main Content Styling */
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+main a {
+    color: var(--base-color-dark);
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Section for Location Selection Form */
+section {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+section form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+section form label {
+    flex: 1 1 150px;
+}
+
+section form input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 100%;
+}
+
+section form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--base-color);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section form button:hover {
+    background-color: var(--base-color-dark);
+}
+
+/* Forecast Box Styling */
+div.forecast-box {
+    margin-top: 1rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: var(--base-color-light);
+    color: #fff;
+}

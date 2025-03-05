@@ -9,7 +9,20 @@
     "excludePattern": "(^|\\/|\\\\)_"
   },
   "opts": {
-    "template": "./node_modules/tidy-jsdoc",
+    "template": "./node_modules/clean-jsdoc-theme",
+    "theme_opts": {
+      "default_theme": "fallback-dark",
+      "base_url": "https://dave-wagner.github.io/BunForge/",
+      "github_url": "https://github.com/dave-wagner/BunForge",
+      "github_repo": "dave-wagner/BunForge",
+      "github_branch": "main",
+      "homepageTitle": "BunForge API Docs",
+      "includeFilesListInHomepage": true
+    },
+    "markdown": {
+      "hardwrap": false,
+      "idInHeadings": true
+    },
     "prism-theme": "prism-custom",
     "encoding": "utf8",
     "destination": "./docs/",

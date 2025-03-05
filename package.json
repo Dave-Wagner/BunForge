@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^9.3.0",
+    "clean-jsdoc-theme": "^4.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0"
@@ -28,7 +29,6 @@
     "globals": "16.0.0",
     "jsdoc": "^4.0.4",
     "prettier": "^3.5.3",
-    "tidy-jsdoc": "^1.4.1",
     "vite": "^6.2.0"
   }
 }

@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "preview": "vite preview",
-    "docs": "jsdoc ./src/ -d docs -r -R ./README.md"
+    "docs": "jsdoc ./src/ -d docs -r -R ./README.md -c ./jsdoc.conf.json"
   },
   "dependencies": {
     "@sentry/browser": "^9.3.0",
@@ -28,6 +28,7 @@
     "globals": "16.0.0",
     "jsdoc": "^4.0.4",
     "prettier": "^3.5.3",
+    "tidy-jsdoc": "^1.4.1",
     "vite": "^6.2.0"
   }
 }

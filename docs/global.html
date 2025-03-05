@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Global</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <title>bunForge: Global</title>
+    
+      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-custom.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    
 </head>
-
 <body>
 
-<div id="main">
+<header class="layout-header">
+  
+  <h1>
+    <a href="./index.html">
+      bunForge
+    </a>
+  </h1>
+  <nav class="layout-nav">
+    <ul><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name is-class"><a href="ErrorHandler.html">ErrorHandler</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="ErrorHandler.html#captureError">captureError</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="ErrorHandler.html#captureError">captureError</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name is-class"><a href="FetchService.html">FetchService</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#post">post</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#post">post</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#put">put</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#put">put</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#request">request</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#request">request</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name is-class"><a href="Logger.html">Logger</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#close">close</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#close">close</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#log">log</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#log">log</a></span></li></ul><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#ErrorHandlerOptions">ErrorHandlerOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#FetchServiceOptions">FetchServiceOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#LoggerOptions">LoggerOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#buildQueryString">buildQueryString</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#debounce">debounce</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#deepClone">deepClone</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#formatDate">formatDate</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#generateUUID">generateUUID</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#mergeObjects">mergeObjects</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#parseQueryString">parseQueryString</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#throttle">throttle</a></span></li>
+  </nav>
+</header>
 
+
+<main class="layout-main ">
+  <div class="container">
+    <p class="page-kind"></p>
     <h1 class="page-title">Global</h1>
-
     
 
 
@@ -26,23 +35,34 @@
 
 <section>
 
-<header>
+
+<header class="not-class">
+
+
     
-        <h2></h2>
+        
+        <!-- <h2></h2> -->
+
+        
+
+        
+
         
     
 </header>
 
 <article>
     <div class="container-overview">
+
+
+
     
         
 
         
 
 
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -72,9 +92,7 @@
     
 
     
-
-    
-</dl>
+</div>
 
 
         
@@ -85,28 +103,31 @@
 
     
 
-    
+     
 
     
 
     
 
-    
 
     
-        <h3 class="subsection-title">Members</h3>
+        <h3 class="subtitle">Members</h3>
 
         
             
-<h4 class="name" id="buildQueryString"><span class="type-signature">(constant) </span>buildQueryString<span class="type-signature"></span></h4>
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="buildQueryString">buildQueryString<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    Build a query string from an object.
-
-Converts an object of key/value pairs into a URL query string.
+    <p>Build a query string from an object.</p>
+<p>Converts an object of key/value pairs into a URL query string.</p>
 </div>
 
 
@@ -115,8 +136,7 @@ Converts an object of key/value pairs into a URL query string.
 
 
 
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -142,42 +162,48 @@ Converts an object of key/value pairs into a URL query string.
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line170">line 170</a>
-    </li></ul></dd>
-    
 
     
 
     
+</div>
 
+
+
+
+
+    <h4>Example</h4>
     
-</dl>
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>const qs = buildQueryString({ foo: "bar", baz: "qux" });
+    <pre><code class="language-js">const qs = buildQueryString({ foo: "bar", baz: "qux" });
 console.log(qs); // "?foo=bar&amp;baz=qux"</code></pre>
 
 
 
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.170">, line 170</a>
+        </li>
+    </ul>
+
+
+</article>
         
             
-<h4 class="name" id="debounce"><span class="type-signature">(constant) </span>debounce<span class="type-signature"></span></h4>
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="buildQueryString">buildQueryString<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    Debounce function.
-
-Returns a debounced version of the provided function that delays its execution
-until after a specified delay has elapsed since the last time it was invoked.
+    <p>Build a query string from an object.</p>
+<p>Converts an object of key/value pairs into a URL query string.</p>
 </div>
 
 
@@ -186,8 +212,7 @@ until after a specified delay has elapsed since the last time it was invoked.
 
 
 
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -213,10 +238,58 @@ until after a specified delay has elapsed since the last time it was invoked.
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line26">line 26</a>
-    </li></ul></dd>
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const qs = buildQueryString({ foo: "bar", baz: "qux" });
+console.log(qs); // "?foo=bar&amp;baz=qux"</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.170">, line 170</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="debounce">debounce<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Debounce function.</p>
+<p>Returns a debounced version of the provided function that delays its execution
+until after a specified delay has elapsed since the last time it was invoked.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
     
 
     
@@ -224,31 +297,67 @@ until after a specified delay has elapsed since the last time it was invoked.
     
 
     
-</dl>
 
-
-
-
-
-    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const debouncedLog = debounce(() => console.log('Debounced!'), 300);
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const debouncedLog = debounce(() => console.log('Debounced!'), 300);
 window.addEventListener('resize', debouncedLog);</code></pre>
 
 
 
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.26">, line 26</a>
+        </li>
+    </ul>
+
+
+</article>
         
             
-<h4 class="name" id="deepClone"><span class="type-signature">(constant) </span>deepClone<span class="type-signature"></span></h4>
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="debounce">debounce<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    Deep clone an object.
-
-Creates a deep copy of an object. This implementation uses JSON methods,
-which is simple but has limitations (e.g., it doesn't copy functions or handle special objects).
+    <p>Debounce function.</p>
+<p>Returns a debounced version of the provided function that delays its execution
+until after a specified delay has elapsed since the last time it was invoked.</p>
 </div>
 
 
@@ -257,8 +366,7 @@ which is simple but has limitations (e.g., it doesn't copy functions or handle s
 
 
 
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -284,10 +392,58 @@ which is simple but has limitations (e.g., it doesn't copy functions or handle s
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line79">line 79</a>
-    </li></ul></dd>
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const debouncedLog = debounce(() => console.log('Debounced!'), 300);
+window.addEventListener('resize', debouncedLog);</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.26">, line 26</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="deepClone">deepClone<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Deep clone an object.</p>
+<p>Creates a deep copy of an object. This implementation uses JSON methods,
+which is simple but has limitations (e.g., it doesn't copy functions or handle special objects).</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
     
 
     
@@ -295,246 +451,68 @@ which is simple but has limitations (e.g., it doesn't copy functions or handle s
     
 
     
-</dl>
 
-
-
-
-
-    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const original = { a: 1, b: { c: 2 } };
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const original = { a: 1, b: { c: 2 } };
 const clone = deepClone(original);
 console.log(clone); // { a: 1, b: { c: 2 } }</code></pre>
 
 
 
-        
-            
-<h4 class="name" id="formatDate"><span class="type-signature">(constant) </span>formatDate<span class="type-signature"></span></h4>
 
-
-
-
-<div class="description">
-    Format a date using the browser's locale.
-
-Converts a given date to a localized string format.
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line129">line 129</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>const formattedDate = formatDate(new Date(), 'en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-console.log(formattedDate); // e.g., "Monday, 14 June 2021"</code></pre>
-
-
-
-        
-            
-<h4 class="name" id="generateUUID"><span class="type-signature">(constant) </span>generateUUID<span class="type-signature"></span></h4>
-
-
-
-
-<div class="description">
-    Generate a UUID (version 4).
-
-Generates a universally unique identifier. Uses the built-in crypto.randomUUID
-if available; otherwise, falls back to a manual implementation.
-</div>
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line188">line 188</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>const id = generateUUID();
-console.log(id); // e.g., "3b12f1df-5232-4f5c-9f8a-9c1234567890"</code></pre>
-
-
-
-        
-            
-<h4 class="name" id="iconCache"><span class="type-signature">(constant) </span>iconCache<span class="type-signature"> :Map.&lt;string, React.LazyExoticComponent.&lt;any>></span></h4>
-
-
-
-
-<div class="description">
-    Cache for dynamically imported icons.
-Keys are constructed from iconSet and iconName.
-</div>
-
-
-
-    <h5>Type:</h5>
+    <h4>Source</h4>
     <ul>
-        <li>
-            
-<span class="param-type">Map.&lt;string, React.LazyExoticComponent.&lt;any>></span>
-
-
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.79">, line 79</a>
         </li>
     </ul>
 
 
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_Icon.jsx.html">components/Icon.jsx</a>, <a href="components_Icon.jsx.html#line23">line 23</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
+</article>
         
             
-<h4 class="name" id="mergeObjects"><span class="type-signature">(constant) </span>mergeObjects<span class="type-signature"></span></h4>
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="deepClone">deepClone<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    Merge multiple objects deeply.
-
-Merges source objects into a target object recursively. For any key that
-exists in multiple objects, later sources override earlier ones.
+    <p>Deep clone an object.</p>
+<p>Creates a deep copy of an object. This implementation uses JSON methods,
+which is simple but has limitations (e.g., it doesn't copy functions or handle special objects).</p>
 </div>
 
 
@@ -543,8 +521,7 @@ exists in multiple objects, later sources override earlier ones.
 
 
 
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -570,10 +547,58 @@ exists in multiple objects, later sources override earlier ones.
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line97">line 97</a>
-    </li></ul></dd>
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const original = { a: 1, b: { c: 2 } };
+const clone = deepClone(original);
+console.log(clone); // { a: 1, b: { c: 2 } }</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.79">, line 79</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="formatDate">formatDate<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Format a date using the browser's locale.</p>
+<p>Converts a given date to a localized string format.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
     
 
     
@@ -581,32 +606,376 @@ exists in multiple objects, later sources override earlier ones.
     
 
     
-</dl>
 
-
-
-
-
-    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const defaults = { a: 1, b: { c: 2 } };
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const formattedDate = formatDate(new Date(), 'en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+console.log(formattedDate); // e.g., "Monday, 14 June 2021"</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.129">, line 129</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="formatDate">formatDate<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Format a date using the browser's locale.</p>
+<p>Converts a given date to a localized string format.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const formattedDate = formatDate(new Date(), 'en-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+console.log(formattedDate); // e.g., "Monday, 14 June 2021"</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.129">, line 129</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="generateUUID">generateUUID<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Generate a UUID (version 4).</p>
+<p>Generates a universally unique identifier. Uses the built-in crypto.randomUUID
+if available; otherwise, falls back to a manual implementation.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const id = generateUUID();
+console.log(id); // e.g., "3b12f1df-5232-4f5c-9f8a-9c1234567890"</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.188">, line 188</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="generateUUID">generateUUID<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Generate a UUID (version 4).</p>
+<p>Generates a universally unique identifier. Uses the built-in crypto.randomUUID
+if available; otherwise, falls back to a manual implementation.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const id = generateUUID();
+console.log(id); // e.g., "3b12f1df-5232-4f5c-9f8a-9c1234567890"</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.188">, line 188</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="mergeObjects">mergeObjects<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Merge multiple objects deeply.</p>
+<p>Merges source objects into a target object recursively. For any key that
+exists in multiple objects, later sources override earlier ones.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const defaults = { a: 1, b: { c: 2 } };
 const options = { b: { d: 3 } };
 const merged = mergeObjects({}, defaults, options);
 console.log(merged); // { a: 1, b: { c: 2, d: 3 } }</code></pre>
 
 
 
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.97">, line 97</a>
+        </li>
+    </ul>
+
+
+</article>
         
             
-<h4 class="name" id="parseQueryString"><span class="type-signature">(constant) </span>parseQueryString<span class="type-signature"></span></h4>
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="mergeObjects">mergeObjects<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    Parse a query string into an object.
-
-Converts a URL query string into an object of key/value pairs.
+    <p>Merge multiple objects deeply.</p>
+<p>Merges source objects into a target object recursively. For any key that
+exists in multiple objects, later sources override earlier ones.</p>
 </div>
 
 
@@ -615,8 +984,7 @@ Converts a URL query string into an object of key/value pairs.
 
 
 
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -642,10 +1010,59 @@ Converts a URL query string into an object of key/value pairs.
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line144">line 144</a>
-    </li></ul></dd>
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const defaults = { a: 1, b: { c: 2 } };
+const options = { b: { d: 3 } };
+const merged = mergeObjects({}, defaults, options);
+console.log(merged); // { a: 1, b: { c: 2, d: 3 } }</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.97">, line 97</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="parseQueryString">parseQueryString<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Parse a query string into an object.</p>
+<p>Converts a URL query string into an object of key/value pairs.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
     
 
     
@@ -653,31 +1070,66 @@ Converts a URL query string into an object of key/value pairs.
     
 
     
-</dl>
 
-
-
-
-
-    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const params = parseQueryString('?foo=bar&amp;baz=qux');
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const params = parseQueryString('?foo=bar&amp;baz=qux');
 console.log(params); // { foo: "bar", baz: "qux" }</code></pre>
 
 
 
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.144">, line 144</a>
+        </li>
+    </ul>
+
+
+</article>
         
             
-<h4 class="name" id="throttle"><span class="type-signature">(constant) </span>throttle<span class="type-signature"></span></h4>
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="parseQueryString">parseQueryString<span class="type-signature"></span></h4>
 
 
 
 
 <div class="description">
-    Throttle function.
-
-Returns a throttled version of the provided function that ensures it is
-executed at most once every specified time interval.
+    <p>Parse a query string into an object.</p>
+<p>Converts a URL query string into an object of key/value pairs.</p>
 </div>
 
 
@@ -686,8 +1138,7 @@ executed at most once every specified time interval.
 
 
 
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -713,10 +1164,58 @@ executed at most once every specified time interval.
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_index.js.html">utils/index.js</a>, <a href="utils_index.js.html#line52">line 52</a>
-    </li></ul></dd>
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const params = parseQueryString('?foo=bar&amp;baz=qux');
+console.log(params); // { foo: "bar", baz: "qux" }</code></pre>
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.144">, line 144</a>
+        </li>
+    </ul>
+
+
+</article>
+        
+            
+
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="throttle">throttle<span class="type-signature"></span></h4>
+
+
+
+
+<div class="description">
+    <p>Throttle function.</p>
+<p>Returns a throttled version of the provided function that ensures it is
+executed at most once every specified time interval.</p>
+</div>
+
+
+
+
+
+
+
+<div class="details">
     
 
     
@@ -724,40 +1223,67 @@ executed at most once every specified time interval.
     
 
     
-</dl>
 
-
-
-
-
-    <h5>Example</h5>
     
-    <pre class="prettyprint"><code>const throttledLog = throttle(() => console.log('Throttled!'), 1000);
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+    <h4>Example</h4>
+    
+    <pre><code class="language-js">const throttledLog = throttle(() => console.log('Throttled!'), 1000);
 window.addEventListener('scroll', throttledLog);</code></pre>
 
 
 
-        
-    
 
-    
-        <h3 class="subsection-title">Methods</h3>
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.52">, line 52</a>
+        </li>
+    </ul>
 
+
+</article>
         
             
 
-    
+<article class="member">
+    <div class="method-type">
+        <span class="method-type-signature is-constant">constant</span>
+    </div>
+<h4 class="member-name" id="throttle">throttle<span class="type-signature"></span></h4>
 
-    
-    <h4 class="name" id="Icon"><span class="type-signature"></span>Icon<span class="signature">(props)</span><span class="type-signature"> &rarr; {JSX.Element}</span></h4>
-    
-
-    
 
 
 
 <div class="description">
-    Generic Icon component that dynamically imports icons from react-icons.
+    <p>Throttle function.</p>
+<p>Returns a throttled version of the provided function that ensures it is
+executed at most once every specified time interval.</p>
 </div>
 
 
@@ -766,287 +1292,10 @@ window.addEventListener('scroll', throttledLog);</code></pre>
 
 
 
-
-
-    <h5>Parameters:</h5>
+<div class="details">
     
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
     
-
-        <tr>
-            
-                <td class="name"><code>props</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The props for the Icon component.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>iconSet</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The icon set to load from (e.g., "fa", "md", "gi", "si").</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>iconName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The name of the icon to import (e.g., "FaBeer").</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>size</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-|
-
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The size of the icon.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>style</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">React.CSSProperties</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Inline styles to apply to the icon.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>className</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Additional class names for the icon.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>rest</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Any additional props to pass to the icon.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
 
     
 
@@ -1073,360 +1322,32 @@ window.addEventListener('scroll', throttledLog);</code></pre>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_Icon.jsx.html">components/Icon.jsx</a>, <a href="components_Icon.jsx.html#line79">line 79</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    The rendered icon component.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">JSX.Element</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>// Renders a FontAwesome beer icon with a size of 32px and orange color.
-&lt;Icon iconSet="fa" iconName="FaBeer" size={32} style={{ color: 'orange' }} /></code></pre>
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="Spinner"><span class="type-signature"></span>Spinner<span class="signature">()</span><span class="type-signature"> &rarr; {JSX.Element}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Spinner Component
-A generic spinner using inline SVG that serves as a fallback while content is loading.
 </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-<dl class="details">
-
+    <h4>Example</h4>
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_Spinner.jsx.html">components/Spinner.jsx</a>, <a href="components_Spinner.jsx.html#line9">line 9</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
+    <pre><code class="language-js">const throttledLog = throttle(() => console.log('Throttled!'), 1000);
+window.addEventListener('scroll', throttledLog);</code></pre>
 
 
 
 
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="utils_index.js.html">utils/index.js</a><a href="utils_index.js.html#source.52">, line 52</a>
+        </li>
+    </ul>
 
 
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
+</article>
         
-<div class="param-desc">
-    The spinner element.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">JSX.Element</span>
-
-
-    </dd>
-</dl>
-
     
 
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="getCachedIcon"><span class="type-signature"></span>getCachedIcon<span class="signature">(iconSet, iconName)</span><span class="type-signature"> &rarr; {React.LazyExoticComponent.&lt;React.ComponentType.&lt;any>>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Dynamically import and cache the desired icon from react-icons.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>iconSet</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The icon set to import from (e.g., "fa", "md", "gi", "si").</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>iconName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The name of the icon (e.g., "FaBeer").</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="components_Icon.jsx.html">components/Icon.jsx</a>, <a href="components_Icon.jsx.html#line32">line 32</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    The lazy-loaded icon component.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">React.LazyExoticComponent.&lt;React.ComponentType.&lt;any>></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
     
 
     
@@ -1434,19 +1355,28 @@ A generic spinner using inline SVG that serves as a fallback while content is lo
 
         
                 
-<h4 class="name" id="ErrorHandlerOptions">ErrorHandlerOptions</h4>
+
+<article class="member">
+    <div class="method-type">
+        
+    </div>
+<h4 class="member-name" id="ErrorHandlerOptions">ErrorHandlerOptions</h4>
 
 
 
 
 
 
-    <h5>Type:</h5>
+    <h4>Type</h4>
     <ul>
         <li>
             
-<span class="param-type">Object</span>
 
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
 
         </li>
     </ul>
@@ -1455,206 +1385,206 @@ A generic spinner using inline SVG that serves as a fallback while content is lo
 
 
 
-    <h5 class="subsection-title">Properties:</h5>
-
+    <h4 class="method-heading">Properties</h4>
     
 
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
+<ul class="method-params">
 
-        <th>Type</th>
 
+    <li>
         
-        <th>Attributes</th>
+            <span class="param-name">logger</span>
         
 
         
-        <th>Default</th>
+            
+
+
+    <span class="param-type">
+        <code><a href="Logger.html">Logger</a></code>
+    </span>
+    
+
         
 
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
 
-    <tbody>
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>A Logger instance for logging errors. Defaults to a console logger.</p>
+        </div>
+
+    </li>
     
 
-        <tr>
-            
-                <td class="name"><code>logger</code></td>
+    <li>
+        
+            <span class="param-name">sentryEnabled</span>
+        
+
+        
             
 
-            <td class="type">
+
+    <span class="param-type">
+        <code>boolean</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+                <code>false</code>
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>Flag to enable Sentry integration.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">sentryDsn</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>The DSN for Sentry initialization. Required if sentryEnabled is true.</p>
+        </div>
+
+    </li>
+    
+</ul>
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_errorHandler.js.html">services/errorHandler.js</a><a href="services_errorHandler.js.html#source.4">, line 4</a>
+        </li>
+    </ul>
+
+
+</article>
             
                 
-<span class="param-type"><a href="Logger.html">Logger</a></span>
 
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A Logger instance for logging errors. Defaults to a console logger.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sentryEnabled</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    false
-                
-                </td>
-            
-
-            <td class="description last">Flag to enable Sentry integration.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>sentryDsn</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">The DSN for Sentry initialization. Required if sentryEnabled is true.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_errorHandler.js.html">services/errorHandler.js</a>, <a href="services_errorHandler.js.html#line4">line 4</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
+<article class="member">
+    <div class="method-type">
+        
+    </div>
+<h4 class="member-name" id="ErrorHandlerOptions">ErrorHandlerOptions</h4>
 
 
 
 
 
 
-            
-                
-<h4 class="name" id="FetchServiceOptions">FetchServiceOptions</h4>
-
-
-
-
-
-
-    <h5>Type:</h5>
+    <h4>Type</h4>
     <ul>
         <li>
             
-<span class="param-type">Object</span>
 
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
 
         </li>
     </ul>
@@ -1663,159 +1593,206 @@ A generic spinner using inline SVG that serves as a fallback while content is lo
 
 
 
-    <h5 class="subsection-title">Properties:</h5>
-
+    <h4 class="method-heading">Properties</h4>
     
 
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
+<ul class="method-params">
 
-        <th>Type</th>
 
+    <li>
         
-        <th>Attributes</th>
+            <span class="param-name">logger</span>
         
 
         
+            
 
-        <th class="last">Description</th>
-    </tr>
-    </thead>
 
-    <tbody>
+    <span class="param-type">
+        <code><a href="Logger.html">Logger</a></code>
+    </span>
     
 
-        <tr>
+        
+
+        
+            <span class="param-attributes">
             
-                <td class="name"><code>logger</code></td>
+                &lt;optional&gt;<br>
             
 
-            <td class="type">
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>A Logger instance for logging errors. Defaults to a console logger.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">sentryEnabled</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>boolean</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+                <code>false</code>
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>Flag to enable Sentry integration.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">sentryDsn</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>The DSN for Sentry initialization. Required if sentryEnabled is true.</p>
+        </div>
+
+    </li>
+    
+</ul>
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_errorHandler.js.html">services/errorHandler.js</a><a href="services_errorHandler.js.html#source.4">, line 4</a>
+        </li>
+    </ul>
+
+
+</article>
             
                 
-<span class="param-type"><a href="Logger.html">Logger</a></span>
 
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">A Logger instance to log API requests and responses. Defaults to a console logger if not provided.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>defaultOptions</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Default options for fetch requests, which will be merged with each call.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_fetcher.js.html">services/fetcher.js</a>, <a href="services_fetcher.js.html#line4">line 4</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
+<article class="member">
+    <div class="method-type">
+        
+    </div>
+<h4 class="member-name" id="FetchServiceOptions">FetchServiceOptions</h4>
 
 
 
 
 
 
-            
-                
-<h4 class="name" id="LoggerOptions">LoggerOptions</h4>
-
-
-
-
-
-
-    <h5>Type:</h5>
+    <h4>Type</h4>
     <ul>
         <li>
             
-<span class="param-type">Object</span>
 
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
 
         </li>
     </ul>
@@ -1824,177 +1801,662 @@ A generic spinner using inline SVG that serves as a fallback while content is lo
 
 
 
-    <h5 class="subsection-title">Properties:</h5>
-
+    <h4 class="method-heading">Properties</h4>
     
 
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
+<ul class="method-params">
 
-        <th>Type</th>
 
+    <li>
         
-        <th>Attributes</th>
+            <span class="param-name">logger</span>
         
 
         
-        <th>Default</th>
+            
+
+
+    <span class="param-type">
+        <code><a href="Logger.html">Logger</a></code>
+    </span>
+    
+
         
 
-        <th class="last">Description</th>
-    </tr>
-    </thead>
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
 
-    <tbody>
+            
+            </span>
+        
+
+        
+
+        <div class="param-description">
+            <p>A Logger instance to log API requests and responses. Defaults to a console logger if not provided.</p>
+        </div>
+
+    </li>
     
 
-        <tr>
-            
-                <td class="name"><code>type</code></td>
+    <li>
+        
+            <span class="param-name">defaultOptions</span>
+        
+
+        
             
 
-            <td class="type">
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+
+        <div class="param-description">
+            <p>Default options for fetch requests, which will be merged with each call.</p>
+        </div>
+
+    </li>
+    
+</ul>
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.4">, line 4</a>
+        </li>
+    </ul>
+
+
+</article>
             
                 
-<span class="param-type">string</span>
 
+<article class="member">
+    <div class="method-type">
+        
+    </div>
+<h4 class="member-name" id="FetchServiceOptions">FetchServiceOptions</h4>
+
+
+
+
+
+
+    <h4>Type</h4>
+    <ul>
+        <li>
+            
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h4 class="method-heading">Properties</h4>
+    
+
+<ul class="method-params">
+
+
+    <li>
+        
+            <span class="param-name">logger</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code><a href="Logger.html">Logger</a></code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
 
             
-            </td>
+            </span>
+        
+
+        
+
+        <div class="param-description">
+            <p>A Logger instance to log API requests and responses. Defaults to a console logger if not provided.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">defaultOptions</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
 
             
-                <td class="attributes">
+            </span>
+        
+
+        
+
+        <div class="param-description">
+            <p>Default options for fetch requests, which will be merged with each call.</p>
+        </div>
+
+    </li>
+    
+</ul>
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.4">, line 4</a>
+        </li>
+    </ul>
+
+
+</article>
+            
                 
-                    &lt;optional><br>
+
+<article class="member">
+    <div class="method-type">
+        
+    </div>
+<h4 class="member-name" id="LoggerOptions">LoggerOptions</h4>
+
+
+
+
+
+
+    <h4>Type</h4>
+    <ul>
+        <li>
+            
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h4 class="method-heading">Properties</h4>
+    
+
+<ul class="method-params">
+
+
+    <li>
+        
+            <span class="param-name">type</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+                <code>'console'</code>
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>The logging type to use. Options: 'console', 'csv', or 'sqlite'.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">filePath</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>For CSV logging, the file path to store log entries.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">dbPath</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
+
+            
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>For SQLite logging, the database file path.</p>
+        </div>
+
+    </li>
+    
+</ul>
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_logger.js.html">services/logger.js</a><a href="services_logger.js.html#source.14">, line 14</a>
+        </li>
+    </ul>
+
+
+</article>
+            
                 
 
-                
-                </td>
+<article class="member">
+    <div class="method-type">
+        
+    </div>
+<h4 class="member-name" id="LoggerOptions">LoggerOptions</h4>
+
+
+
+
+
+
+    <h4>Type</h4>
+    <ul>
+        <li>
+            
+
+
+    <span class="param-type">
+        <code>Object</code>
+    </span>
+    
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h4 class="method-heading">Properties</h4>
+    
+
+<ul class="method-params">
+
+
+    <li>
+        
+            <span class="param-name">type</span>
+        
+
+        
+            
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+        
+
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
             
 
             
-                <td class="default">
-                
-                    'console'
-                
-                </td>
+            </span>
+        
+
+        
+            <span class="param-default">
             
+                <code>'console'</code>
+            
+            </span>
+        
 
-            <td class="description last">The logging type to use. Options: 'console', 'csv', or 'sqlite'.</td>
-        </tr>
+        <div class="param-description">
+            <p>The logging type to use. Options: 'console', 'csv', or 'sqlite'.</p>
+        </div>
 
+    </li>
     
 
-        <tr>
-            
-                <td class="name"><code>filePath</code></td>
-            
+    <li>
+        
+            <span class="param-name">filePath</span>
+        
 
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
+        
             
 
-            
-                <td class="default">
-                
-                </td>
-            
 
-            <td class="description last">For CSV logging, the file path to store log entries.</td>
-        </tr>
-
+    <span class="param-type">
+        <code>string</code>
+    </span>
     
 
-        <tr>
-            
-                <td class="name"><code>dbPath</code></td>
-            
+        
 
-            <td class="type">
+        
+            <span class="param-attributes">
             
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-                </td>
+                &lt;optional&gt;<br>
             
 
             
-                <td class="default">
-                
-                </td>
+            </span>
+        
+
+        
+            <span class="param-default">
+            
+            </span>
+        
+
+        <div class="param-description">
+            <p>For CSV logging, the file path to store log entries.</p>
+        </div>
+
+    </li>
+    
+
+    <li>
+        
+            <span class="param-name">dbPath</span>
+        
+
+        
             
 
-            <td class="description last">For SQLite logging, the database file path.</td>
-        </tr>
 
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
+    <span class="param-type">
+        <code>string</code>
+    </span>
     
 
-    
+        
 
-    
+        
+            <span class="param-attributes">
+            
+                &lt;optional&gt;<br>
+            
 
-    
+            
+            </span>
+        
 
-    
+        
+            <span class="param-default">
+            
+            </span>
+        
 
-    
+        <div class="param-description">
+            <p>For SQLite logging, the database file path.</p>
+        </div>
 
+    </li>
     
+</ul>
 
-    
 
-    
 
-    
 
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_logger.js.html">services/logger.js</a>, <a href="services_logger.js.html#line14">line 14</a>
-    </li></ul></dd>
+<div class="details">
     
 
     
@@ -2002,13 +2464,45 @@ A generic spinner using inline SVG that serves as a fallback while content is lo
     
 
     
-</dl>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
 
 
 
 
 
 
+
+    <h4>Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_logger.js.html">services/logger.js</a><a href="services_logger.js.html#source.14">, line 14</a>
+        </li>
+    </ul>
+
+
+</article>
             
     
 
@@ -2020,19 +2514,17 @@ A generic spinner using inline SVG that serves as a fallback while content is lo
 
 
 
-</div>
+  </div>
+</main>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li><li><a href="ErrorHandler.html">ErrorHandler</a></li><li><a href="FetchService.html">FetchService</a></li><li><a href="Logger.html">Logger</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#buildQueryString">buildQueryString</a></li><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#generateUUID">generateUUID</a></li><li><a href="global.html#getCachedIcon">getCachedIcon</a></li><li><a href="global.html#iconCache">iconCache</a></li><li><a href="global.html#mergeObjects">mergeObjects</a></li><li><a href="global.html#parseQueryString">parseQueryString</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 15:24:24 GMT+0000 (Coordinated Universal Time)
+<footer class="layout-footer">
+  <div class="container">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 16:04:42 GMT+0000 (Coordinated Universal Time)
+  </div>
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+
+
+<script src="scripts/prism.dev.js"></script>
 </body>
 </html>

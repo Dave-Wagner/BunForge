@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: FetchService</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <title>bunForge: FetchService</title>
+    
+      <link type="text/css" rel="stylesheet" href="styles/vendor/prism-custom.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    
 </head>
-
 <body>
 
-<div id="main">
+<header class="layout-header">
+  
+  <h1>
+    <a href="./index.html">
+      bunForge
+    </a>
+  </h1>
+  <nav class="layout-nav">
+    <ul><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name is-class"><a href="ErrorHandler.html">ErrorHandler</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="ErrorHandler.html#captureError">captureError</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="ErrorHandler.html#captureError">captureError</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name is-class"><a href="FetchService.html">FetchService</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#get">get</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#post">post</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#post">post</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#put">put</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#put">put</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#request">request</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="FetchService.html#request">request</a></span></li><li class="nav-heading"><span class="nav-item-type type-class" title="class">C</span><span class="nav-item-name is-class"><a href="Logger.html">Logger</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#close">close</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#close">close</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#log">log</a></span></li><li class="nav-item"><span class="nav-item-type type-function" title="function">F</span><span class="nav-item-name is-function"><a href="Logger.html#log">log</a></span></li></ul><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#ErrorHandlerOptions">ErrorHandlerOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#FetchServiceOptions">FetchServiceOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-typedef" title="typedef">T</span><span class="nav-item-name is-typedef"><a href="global.html#LoggerOptions">LoggerOptions</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#buildQueryString">buildQueryString</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#debounce">debounce</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#deepClone">deepClone</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#formatDate">formatDate</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#generateUUID">generateUUID</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#mergeObjects">mergeObjects</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#parseQueryString">parseQueryString</a></span></li><li class="nav-item"><span class="nav-item-type type-member" title="member">M</span><span class="nav-item-name is-member"><a href="global.html#throttle">throttle</a></span></li>
+  </nav>
+</header>
 
-    <h1 class="page-title">Class: FetchService</h1>
 
+<main class="layout-main ">
+  <div class="container">
+    <p class="page-kind">Class</p>
+    <h1 class="page-title">FetchService</h1>
     
 
 
@@ -26,37 +35,63 @@
 
 <section>
 
-<header>
-    
-        <h2><span class="attribs"><span class="type-signature"></span></span>FetchService<span class="signature">(options)</span><span class="type-signature"></span></h2>
-        
-            <div class="class-description">FetchService Class.
 
-Provides a wrapper around the native fetch API with integrated logging.
-It logs the start, completion, and any errors for each API request.</div>
+<header class="class">
+
+
+    
+        
+        <!-- <h2>FetchService</h2> -->
+
+        
+
+        
+            <h4 class="method-heading">Summary</h4>
+            <div class="class-summary">Creates an instance of FetchService.</div>
+        
+
+        
+            <h4 class="method-heading">Description</h4>
+            <div class="class-description"><p>FetchService Class.</p>
+<p>Provides a wrapper around the native fetch API with integrated logging.
+It logs the start, completion, and any errors for each API request.</p></div>
         
     
 </header>
 
 <article>
     <div class="container-overview">
+
+
+
     
         
 
-    
-    <h2>Constructor</h2>
-    
 
-    
-    <h4 class="name" id="FetchService"><span class="type-signature"></span>new FetchService<span class="signature">(options)</span><span class="type-signature"></span></h4>
-    
+
+
 
     
 
 
+    
+    <h3 class="subtitle">Constructor</h3>
+    
 
-<div class="description">
-    Creates an instance of FetchService.
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="FetchService">new FetchService<span class="signature">(options)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Creates an instance of FetchService.</p>
 </div>
 
 
@@ -67,61 +102,44 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
-    <h5>Parameters:</h5>
+    <h4 class="method-heading">Parameters</h4>
     
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
+<ul class="method-params">
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>options</code></td>
+                <span class="param-name">options</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type"><a href="global.html#FetchServiceOptions">FetchServiceOptions</a></span>
 
+
+    <span class="param-type">
+        <code><a href="global.html#FetchServiceOptions">FetchServiceOptions</a></code>
+    </span>
+    
 
             
-            </td>
 
             
 
             
 
-            <td class="description last">Configuration options for the fetch service.</td>
-        </tr>
+            <div class="param-description"><p>Configuration options for the fetch service.</p></div>
+            
+        </li>
 
     
-    </tbody>
-</table>
+</ul>
 
 
 
 
 
-
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -147,18 +165,11 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_fetcher.js.html">services/fetcher.js</a>, <a href="services_fetcher.js.html#line16">line 16</a>
-    </li></ul></dd>
-    
 
     
 
     
-
-    
-</dl>
+</div>
 
 
 
@@ -176,6 +187,13 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.16">, line 16</a>
+        </li>
+    </ul>
 
 
 
@@ -186,34 +204,46 @@ It logs the start, completion, and any errors for each API request.</div>
 
     
 
-    
+     
 
     
 
     
 
-    
 
     
 
     
-        <h3 class="subsection-title">Methods</h3>
+        <h3 class="subtitle">Methods</h3>
 
         
             
 
+
+    <article class="method">
+
+
+
+
     
 
-    
-    <h4 class="name" id="delete"><span class="type-signature">(async) </span>delete<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;Response>}</span></h4>
-    
 
     
 
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="delete">delete<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
 
 
-<div class="description">
-    Performs a DELETE request.
+
+
+
+<div class="method-description">
+    
+    <p>Performs a DELETE request.</p>
 </div>
 
 
@@ -224,116 +254,88 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
-    <h5>Parameters:</h5>
+    <h4 class="method-heading">Parameters</h4>
     
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
+<ul class="method-params">
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>url</code></td>
+                <span class="param-name">url</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">string</span>
 
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
 
             
-            </td>
 
             
-                <td class="attributes">
+                <span class="param-attributes">
                 
 
                 
 
                 
-                </td>
+                </span>
             
 
             
 
-            <td class="description last">The URL to request.</td>
-        </tr>
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
 
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>options</code></td>
+                <span class="param-name">options</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">RequestInit</span>
 
 
-            
-            </td>
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
 
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
             
 
             
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
 
-            <td class="description last">Additional fetch options for the DELETE request.</td>
-        </tr>
+                
 
-    
-    </tbody>
-</table>
+                
+                </span>
+            
 
+            
 
-
-
-
-
-<dl class="details">
-
-    
-
-    
+            <div class="param-description"><p>Additional fetch options for the DELETE request.</p></div>
+            
+        </li>
 
     
+</ul>
 
-    
 
-    
 
-    
 
+
+<div class="details">
     
 
     
@@ -347,10 +349,13 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_fetcher.js.html">services/fetcher.js</a>, <a href="services_fetcher.js.html#line120">line 120</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+
     
 
     
@@ -358,64 +363,80 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-</dl>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    A promise that resolves to the fetch response.
+    
 </div>
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Response></span>
-
-
-    </dd>
-</dl>
-
+    <h4 class="method-heading">Returns</h4>
+    <ul>
     
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.120">, line 120</a>
+        </li>
+    </ul>
+
+
+
+    </article>
 
         
             
 
+
+    <article class="method">
+
+
+
+
     
 
-    
-    <h4 class="name" id="get"><span class="type-signature">(async) </span>get<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;Response>}</span></h4>
-    
 
     
 
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="delete">delete<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
 
 
-<div class="description">
-    Performs a GET request.
+
+
+
+<div class="method-description">
+    
+    <p>Performs a DELETE request.</p>
 </div>
 
 
@@ -426,116 +447,88 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
-    <h5>Parameters:</h5>
+    <h4 class="method-heading">Parameters</h4>
     
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
+<ul class="method-params">
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>url</code></td>
+                <span class="param-name">url</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">string</span>
 
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
 
             
-            </td>
 
             
-                <td class="attributes">
+                <span class="param-attributes">
                 
 
                 
 
                 
-                </td>
+                </span>
             
 
             
 
-            <td class="description last">The URL to request.</td>
-        </tr>
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
 
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>options</code></td>
+                <span class="param-name">options</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">RequestInit</span>
 
 
-            
-            </td>
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
 
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
             
 
             
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
 
-            <td class="description last">Additional fetch options for the GET request.</td>
-        </tr>
+                
 
-    
-    </tbody>
-</table>
+                
+                </span>
+            
 
+            
 
-
-
-
-
-<dl class="details">
-
-    
-
-    
+            <div class="param-description"><p>Additional fetch options for the DELETE request.</p></div>
+            
+        </li>
 
     
+</ul>
 
-    
 
-    
 
-    
 
+
+<div class="details">
     
 
     
@@ -549,10 +542,13 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_fetcher.js.html">services/fetcher.js</a>, <a href="services_fetcher.js.html#line70">line 70</a>
-    </li></ul></dd>
+
+    
+
+    
+
+    
+
     
 
     
@@ -560,64 +556,80 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-</dl>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    A promise that resolves to the fetch response.
+    
 </div>
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Response></span>
-
-
-    </dd>
-</dl>
-
+    <h4 class="method-heading">Returns</h4>
+    <ul>
     
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.120">, line 120</a>
+        </li>
+    </ul>
+
+
+
+    </article>
 
         
             
 
+
+    <article class="method">
+
+
+
+
     
 
-    
-    <h4 class="name" id="post"><span class="type-signature">(async) </span>post<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;Response>}</span></h4>
-    
 
     
 
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="get">get<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
 
 
-<div class="description">
-    Performs a POST request.
+
+
+
+<div class="method-description">
+    
+    <p>Performs a GET request.</p>
 </div>
 
 
@@ -628,135 +640,88 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
-    <h5>Parameters:</h5>
+    <h4 class="method-heading">Parameters</h4>
     
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
+<ul class="method-params">
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>url</code></td>
+                <span class="param-name">url</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">string</span>
 
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
 
             
-            </td>
 
             
-                <td class="attributes">
+                <span class="param-attributes">
                 
 
                 
 
                 
-                </td>
+                </span>
             
 
             
 
-            <td class="description last">The URL to request.</td>
-        </tr>
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
 
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>body</code></td>
+                <span class="param-name">options</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">*</span>
 
 
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The payload to send with the POST request.</td>
-        </tr>
-
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
     
 
-        <tr>
-            
-                <td class="name"><code>options</code></td>
             
 
-            <td class="type">
             
+                <span class="param-attributes">
                 
-<span class="param-type">RequestInit</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
+                    &lt;optional&gt;<br>
                 
 
                 
 
                 
-                </td>
+                </span>
             
 
             
 
-            <td class="description last">Additional fetch options for the POST request.</td>
-        </tr>
+            <div class="param-description"><p>Additional fetch options for the GET request.</p></div>
+            
+        </li>
 
     
-    </tbody>
-</table>
+</ul>
 
 
 
 
 
-
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -782,75 +747,82 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_fetcher.js.html">services/fetcher.js</a>, <a href="services_fetcher.js.html#line82">line 82</a>
-    </li></ul></dd>
-    
 
     
 
     
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    A promise that resolves to the fetch response.
 </div>
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Response></span>
-
-
-    </dd>
-</dl>
-
+    <h4 class="method-heading">Returns</h4>
+    <ul>
     
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.70">, line 70</a>
+        </li>
+    </ul>
+
+
+
+    </article>
 
         
             
 
+
+    <article class="method">
+
+
+
+
     
 
-    
-    <h4 class="name" id="put"><span class="type-signature">(async) </span>put<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;Response>}</span></h4>
-    
 
     
 
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="get">get<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
 
 
-<div class="description">
-    Performs a PUT request.
+
+
+
+<div class="method-description">
+    
+    <p>Performs a GET request.</p>
 </div>
 
 
@@ -861,135 +833,88 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
-    <h5>Parameters:</h5>
+    <h4 class="method-heading">Parameters</h4>
     
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
+<ul class="method-params">
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>url</code></td>
+                <span class="param-name">url</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">string</span>
 
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
 
             
-            </td>
 
             
-                <td class="attributes">
+                <span class="param-attributes">
                 
 
                 
 
                 
-                </td>
+                </span>
             
 
             
 
-            <td class="description last">The URL to request.</td>
-        </tr>
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
 
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>body</code></td>
+                <span class="param-name">options</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">*</span>
 
 
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The payload to send with the PUT request.</td>
-        </tr>
-
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
     
 
-        <tr>
-            
-                <td class="name"><code>options</code></td>
             
 
-            <td class="type">
             
+                <span class="param-attributes">
                 
-<span class="param-type">RequestInit</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
+                    &lt;optional&gt;<br>
                 
 
                 
 
                 
-                </td>
+                </span>
             
 
             
 
-            <td class="description last">Additional fetch options for the PUT request.</td>
-        </tr>
+            <div class="param-description"><p>Additional fetch options for the GET request.</p></div>
+            
+        </li>
 
     
-    </tbody>
-</table>
+</ul>
 
 
 
 
 
-
-<dl class="details">
-
+<div class="details">
     
 
     
@@ -1015,75 +940,82 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_fetcher.js.html">services/fetcher.js</a>, <a href="services_fetcher.js.html#line102">line 102</a>
-    </li></ul></dd>
-    
 
     
 
     
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    A promise that resolves to the fetch response.
 </div>
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;Response></span>
-
-
-    </dd>
-</dl>
-
+    <h4 class="method-heading">Returns</h4>
+    <ul>
     
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.70">, line 70</a>
+        </li>
+    </ul>
+
+
+
+    </article>
 
         
             
 
+
+    <article class="method">
+
+
+
+
     
 
-    
-    <h4 class="name" id="request"><span class="type-signature">(async) </span>request<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;Response>}</span></h4>
-    
 
     
 
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="post">post<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
 
 
-<div class="description">
-    Performs a fetch request and logs the process.
+
+
+
+<div class="method-description">
+    
+    <p>Performs a POST request.</p>
 </div>
 
 
@@ -1094,108 +1026,122 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
-    <h5>Parameters:</h5>
+    <h4 class="method-heading">Parameters</h4>
     
 
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
+<ul class="method-params">
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>url</code></td>
+                <span class="param-name">url</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">string</span>
 
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
 
             
-            </td>
 
             
-                <td class="attributes">
+                <span class="param-attributes">
                 
 
                 
 
                 
-                </td>
+                </span>
             
 
             
 
-            <td class="description last">The URL to request.</td>
-        </tr>
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
 
     
 
-        <tr>
+        <li>
             
-                <td class="name"><code>options</code></td>
+                <span class="param-name">body</span>
             
 
-            <td class="type">
             
                 
-<span class="param-type">RequestInit</span>
 
 
-            
-            </td>
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
 
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
             
 
             
+                <span class="param-attributes">
+                
 
-            <td class="description last">Options for the fetch request.</td>
-        </tr>
+                
 
-    
-    </tbody>
-</table>
+                
+                </span>
+            
 
+            
 
-
-
-
-
-<dl class="details">
-
-    
+            <div class="param-description"><p>The payload to send with the POST request.</p></div>
+            
+        </li>
 
     
 
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the POST request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
     
 
     
@@ -1217,10 +1163,7 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="services_fetcher.js.html">services/fetcher.js</a>, <a href="services_fetcher.js.html#line35">line 35</a>
-    </li></ul></dd>
+
     
 
     
@@ -1228,48 +1171,1116 @@ It logs the start, completion, and any errors for each API request.</div>
     
 
     
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    A promise that resolves to the fetch response.
 </div>
 
 
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.82">, line 82</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
         
-<span class="param-type">Promise.&lt;Response></span>
+            
 
 
-    </dd>
-</dl>
+    <article class="method">
+
+
+
 
     
 
 
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="post">post<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
 
 
+
+
+
+<div class="method-description">
+    
+    <p>Performs a POST request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The payload to send with the POST request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the POST request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.82">, line 82</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="put">put<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a PUT request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The payload to send with the PUT request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the PUT request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.102">, line 102</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="put">put<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a PUT request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The payload to send with the PUT request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the PUT request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.102">, line 102</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="request">request<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a fetch request and logs the process.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Options for the fetch request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.35">, line 35</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="request">request<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a fetch request and logs the process.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Options for the fetch request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.35">, line 35</a>
+        </li>
+    </ul>
+
+
+
+    </article>
 
         
     
@@ -1284,19 +2295,2282 @@ It logs the start, completion, and any errors for each API request.</div>
 
 
 
+
+
+
+<section>
+
+
+<header class="class">
+
+
+    
+        
+        <!-- <h2>FetchService</h2> -->
+
+        
+
+        
+            <h4 class="method-heading">Summary</h4>
+            <div class="class-summary">Creates an instance of FetchService.</div>
+        
+
+        
+            <h4 class="method-heading">Description</h4>
+            <div class="class-description"><p>FetchService Class.</p>
+<p>Provides a wrapper around the native fetch API with integrated logging.
+It logs the start, completion, and any errors for each API request.</p></div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+
+
+
+    
+        
+
+
+
+
+
+    
+
+
+    
+    <h3 class="subtitle">Constructor</h3>
+    
+
+    <div class="method-type">
+    
+    </div>
+
+    <h4 class="method-name" id="FetchService">new FetchService<span class="signature">(options)</span><span class="return-type-signature"></span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Creates an instance of FetchService.</p>
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li><li><a href="ErrorHandler.html">ErrorHandler</a></li><li><a href="FetchService.html">FetchService</a></li><li><a href="Logger.html">Logger</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#buildQueryString">buildQueryString</a></li><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#generateUUID">generateUUID</a></li><li><a href="global.html#getCachedIcon">getCachedIcon</a></li><li><a href="global.html#iconCache">iconCache</a></li><li><a href="global.html#mergeObjects">mergeObjects</a></li><li><a href="global.html#parseQueryString">parseQueryString</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
-</nav>
 
-<br class="clear">
 
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 15:24:24 GMT+0000 (Coordinated Universal Time)
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code><a href="global.html#FetchServiceOptions">FetchServiceOptions</a></code>
+    </span>
+    
+
+            
+
+            
+
+            
+
+            <div class="param-description"><p>Configuration options for the fetch service.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.16">, line 16</a>
+        </li>
+    </ul>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+     
+
+    
+
+    
+
+
+    
+
+    
+        <h3 class="subtitle">Methods</h3>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="delete">delete<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a DELETE request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the DELETE request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.120">, line 120</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="delete">delete<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a DELETE request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the DELETE request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.120">, line 120</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="get">get<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a GET request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the GET request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.70">, line 70</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="get">get<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a GET request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the GET request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.70">, line 70</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="post">post<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a POST request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The payload to send with the POST request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the POST request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.82">, line 82</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="post">post<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a POST request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The payload to send with the POST request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the POST request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.82">, line 82</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="put">put<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a PUT request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The payload to send with the PUT request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the PUT request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.102">, line 102</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="put">put<span class="signature">(url, body, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a PUT request.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">body</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>*</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The payload to send with the PUT request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Additional fetch options for the PUT request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.102">, line 102</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="request">request<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a fetch request and logs the process.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Options for the fetch request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.35">, line 35</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+            
+
+
+    <article class="method">
+
+
+
+
+    
+
+
+    
+
+    <div class="method-type">
+    <span class="method-type-signature is-async">async</span>
+    </div>
+
+    <h4 class="method-name" id="request">request<span class="signature">(url, options<span class="signature-attributes">opt</span>)</span><span class="return-type-signature"> &rarr; {Promise.&lt;Response>}</span>
+    </h4>
+
+
+
+
+
+<div class="method-description">
+    
+    <p>Performs a fetch request and logs the process.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Parameters</h4>
+    
+
+<ul class="method-params">
+    
+
+        <li>
+            
+                <span class="param-name">url</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>string</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>The URL to request.</p></div>
+            
+        </li>
+
+    
+
+        <li>
+            
+                <span class="param-name">options</span>
+            
+
+            
+                
+
+
+    <span class="param-type">
+        <code>RequestInit</code>
+    </span>
+    
+
+            
+
+            
+                <span class="param-attributes">
+                
+                    &lt;optional&gt;<br>
+                
+
+                
+
+                
+                </span>
+            
+
+            
+
+            <div class="param-description"><p>Options for the fetch request.</p></div>
+            
+        </li>
+
+    
+</ul>
+
+
+
+
+
+<div class="details">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</div>
+
+
+
+    <h4 class="method-heading">Returns</h4>
+    <ul>
+    
+        <li class="method-returns">
+            
+                <code>Promise.&lt;Response></code>
+            
+            
+                <p>A promise that resolves to the fetch response.</p>
+            
+        </li>
+    
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h4 class="method-heading">Source</h4>
+    <ul>
+        <li class="method-source">
+            <a href="services_fetcher.js.html">services/fetcher.js</a><a href="services_fetcher.js.html#source.35">, line 35</a>
+        </li>
+    </ul>
+
+
+
+    </article>
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+  </div>
+</main>
+
+<footer class="layout-footer">
+  <div class="container">
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 16:04:42 GMT+0000 (Coordinated Universal Time)
+  </div>
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+
+
+<script src="scripts/prism.dev.js"></script>
 </body>
 </html>

@@ -42,7 +42,7 @@ BunForge is an opinionated boilerplate and meta-framework for building modern Sa
 
 ### Installation
 
-#### Clone the repository
+#### Clone the repository (or click template above)
 
 ```bash
 git clone http://github.com/Dave-Wagner/BunForge.git

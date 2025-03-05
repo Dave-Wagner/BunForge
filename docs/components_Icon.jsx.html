@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Icon.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Icon.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { lazy, Suspense } from "react";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import Spinner from "@/components/Spinner";
+import Logger from "@/services/logger";
+
+// Create a default logger instance for icon-related logging.
+const iconLogger = new Logger({ type: "console" });
+
+// Static mapping for supported icon sets.
+// also update this in the vite.config.js
+const iconSets = {
+  fa: () => import("react-icons/fa"),
+  md: () => import("react-icons/md"),
+  gi: () => import("react-icons/gi"),
+  si: () => import("react-icons/si"),
+};
+
+/**
+ * Cache for dynamically imported icons.
+ * Keys are constructed from iconSet and iconName.
+ * @type {Map&lt;string, React.LazyExoticComponent&lt;any>>}
+ */
+const iconCache = new Map();
+
+/**
+ * Dynamically import and cache the desired icon from react-icons.
+ *
+ * @param {string} iconSet - The icon set to import from (e.g., "fa", "md", "gi", "si").
+ * @param {string} iconName - The name of the icon (e.g., "FaBeer").
+ * @returns {React.LazyExoticComponent&lt;React.ComponentType&lt;any>>} The lazy-loaded icon component.
+ */
+const getCachedIcon = (iconSet, iconName) => {
+  const cacheKey = `${iconSet}-${iconName}`;
+  if (iconCache.has(cacheKey)) {
+    iconLogger.log("debug", `Icon cache hit for ${cacheKey}`);
+    return iconCache.get(cacheKey);
+  }
+  const loadIconSet = iconSets[iconSet];
+  if (!loadIconSet) {
+    throw new Error(`Icon set "${iconSet}" is not supported.`);
+  }
+
+  const LazyIcon = lazy(() =>
+    loadIconSet().then((module) => {
+      if (!module[iconName]) {
+        throw new Error(
+          `Icon "${iconName}" not found in react-icons/${iconSet}`
+        );
+      }
+      iconLogger.log(
+        "info",
+        `Icon "${iconName}" loaded successfully from react-icons/${iconSet}`
+      );
+      return { default: module[iconName] };
+    })
+  );
+  iconCache.set(cacheKey, LazyIcon);
+  iconLogger.log("debug", `Caching icon ${cacheKey}`);
+  return LazyIcon;
+};
+
+/**
+ * Generic Icon component that dynamically imports icons from react-icons.
+ *
+ * @param {Object} props - The props for the Icon component.
+ * @param {string} props.iconSet - The icon set to load from (e.g., "fa", "md", "gi", "si").
+ * @param {string} props.iconName - The name of the icon to import (e.g., "FaBeer").
+ * @param {number|string} [props.size] - The size of the icon.
+ * @param {React.CSSProperties} [props.style] - Inline styles to apply to the icon.
+ * @param {string} [props.className] - Additional class names for the icon.
+ * @param {Object} [props.rest] - Any additional props to pass to the icon.
+ *
+ * @example
+ * // Renders a FontAwesome beer icon with a size of 32px and orange color.
+ * &lt;Icon iconSet="fa" iconName="FaBeer" size={32} style={{ color: 'orange' }} />
+ *
+ * @returns {JSX.Element} The rendered icon component.
+ */
+const Icon = ({ iconSet, iconName, size, style, className, ...rest }) => {
+  const LazyIcon = getCachedIcon(iconSet, iconName);
+  return (
+    &lt;ErrorBoundary>
+      &lt;Suspense fallback={&lt;Spinner />}>
+        &lt;LazyIcon size={size} style={style} className={className} {...rest} />
+      &lt;/Suspense>
+    &lt;/ErrorBoundary>
+  );
+};
+
+export default Icon;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li><li><a href="ErrorHandler.html">ErrorHandler</a></li><li><a href="FetchService.html">FetchService</a></li><li><a href="Logger.html">Logger</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#buildQueryString">buildQueryString</a></li><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#generateUUID">generateUUID</a></li><li><a href="global.html#getCachedIcon">getCachedIcon</a></li><li><a href="global.html#iconCache">iconCache</a></li><li><a href="global.html#mergeObjects">mergeObjects</a></li><li><a href="global.html#parseQueryString">parseQueryString</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 15:01:21 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

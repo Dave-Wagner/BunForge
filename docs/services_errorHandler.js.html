@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: services/errorHandler.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: services/errorHandler.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// Import the Logger service.
+import Logger from '@/services/logger.js';
+
+/**
+ * @typedef {Object} ErrorHandlerOptions
+ * @property {Logger} [logger] - A Logger instance for logging errors. Defaults to a console logger.
+ * @property {boolean} [sentryEnabled=false] - Flag to enable Sentry integration.
+ * @property {string} [sentryDsn] - The DSN for Sentry initialization. Required if sentryEnabled is true.
+ */
+
+/**
+ * ErrorHandler Class.
+ *
+ * This service handles error logging and optionally integrates with Sentry for advanced error tracking.
+ * By default, it logs errors using the provided logger. When Sentry is enabled and initialized, errors are also reported to Sentry.
+ */
+class ErrorHandler {
+    /**
+     * Creates an instance of ErrorHandler.
+     * @param {ErrorHandlerOptions} options - Configuration options for the error handler.
+     */
+    constructor(options = {}) {
+        // Use the provided logger or default to a console logger.
+        this.logger = options.logger || new Logger({ type: 'console' });
+
+        // Determine if Sentry integration is enabled.
+        this.sentryEnabled = options.sentryEnabled || false;
+        this.sentry = null; // Will hold the Sentry object if initialized.
+
+        // If Sentry integration is requested, ensure a DSN is provided.
+        if (this.sentryEnabled) {
+            if (!options.sentryDsn) {
+                this.logger.log('error', "Sentry integration is enabled, but no DSN was provided.");
+            } else {
+                // Dynamically import Sentry to keep the default dependency free.
+                import('@sentry/browser')
+                    .then((SentryModule) => {
+                        const Sentry = SentryModule;
+                        // Initialize Sentry with the provided DSN.
+                        Sentry.init({
+                            dsn: options.sentryDsn,
+                            // Additional Sentry options can be added here.
+                        });
+                        this.sentry = Sentry;
+                        this.logger.log('info', 'Sentry has been initialized successfully.');
+                    })
+                    .catch((err) => {
+                        this.logger.log('error', `Failed to load Sentry: ${err.message}`);
+                    });
+            }
+        }
+    }
+
+    /**
+     * Captures an error, logs it, and optionally reports it to Sentry.
+     *
+     * @param {Error} error - The error to handle.
+     * @param {Object} [context={}] - Additional context or metadata related to the error.
+     */
+    captureError(error, context = {}) {
+        // Log the error using the logger.
+        this.logger.log('error', error.message || 'Unknown error');
+
+        // If Sentry is enabled and has been initialized, report the error.
+        if (this.sentryEnabled &amp;&amp; this.sentry) {
+            this.sentry.captureException(error, { extra: context });
+        }
+    }
+}
+
+/* ========================================================================
+   Examples of Usage:
+   Uncomment the examples below to test the ErrorHandler service.
+   ======================================================================== */
+
+// Example 1: Default error handling (dependency free, logs to console).
+// const errorHandler = new ErrorHandler();
+// try {
+// Simulate an error.
+//   throw new Error("Sample error for testing default error handling.");
+// } catch (err) {
+//   errorHandler.captureError(err, { additional: "context info" });
+// }
+
+// Example 2: Error handling with Sentry integration.
+// Ensure that '@sentry/browser' is installed in your project and a valid DSN is provided.
+// const errorHandlerWithSentry = new ErrorHandler({
+//   sentryEnabled: true,
+//   sentryDsn: 'https://examplePublicKey@o0.ingest.sentry.io/0'
+// });
+// try {
+// Simulate an error.
+//   throw new Error("Sample error for testing Sentry integration.");
+// } catch (err) {
+//   errorHandlerWithSentry.captureError(err, { module: "exampleModule" });
+// }
+
+export default ErrorHandler;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ErrorBoundary.html">ErrorBoundary</a></li><li><a href="ErrorHandler.html">ErrorHandler</a></li><li><a href="FetchService.html">FetchService</a></li><li><a href="Logger.html">Logger</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Icon">Icon</a></li><li><a href="global.html#Spinner">Spinner</a></li><li><a href="global.html#buildQueryString">buildQueryString</a></li><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#deepClone">deepClone</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#generateUUID">generateUUID</a></li><li><a href="global.html#getCachedIcon">getCachedIcon</a></li><li><a href="global.html#iconCache">iconCache</a></li><li><a href="global.html#mergeObjects">mergeObjects</a></li><li><a href="global.html#parseQueryString">parseQueryString</a></li><li><a href="global.html#throttle">throttle</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 15:01:21 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

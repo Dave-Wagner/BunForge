@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "preview": "vite preview",
-    "docs": "jsdoc ./src/ -d docs -r"
+    "docs": "jsdoc ./src/ -d docs -r -R ./README.md"
   },
   "dependencies": {
     "@sentry/browser": "^9.3.0",

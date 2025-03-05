@@ -42,6 +42,135 @@
 
 
 
+    <section>
+        <article><h1>BunForge</h1>
+<p>BunForge is an opinionated boilerplate and meta-framework for building modern SaaS applications quickly using Bun, Vite, and React. It is designed to provide a robust, modular foundation with features that enhance performance, error handling, and developer experience—all while being flexible enough to integrate with other libraries.</p>
+<h2>Features</h2>
+<h3>Built-In Logging Service</h3>
+<ul>
+<li><strong>Multiple Backends:</strong> Supports console, CSV (via Bun’s file I/O), and SQLite (using Bun's built-in SQLite API) logging.</li>
+<li><strong>Easy Configuration:</strong> Configure the logging type and paths via environment variables.</li>
+<li><strong>Detailed Logging:</strong> Logs detailed messages, including timestamps, severity levels, and messages.</li>
+</ul>
+<h3>Error Handling &amp; Reporting</h3>
+<ul>
+<li><strong>Integrated ErrorHandler:</strong> Captures errors, logs them using our Logger, and optionally reports them to Sentry.</li>
+<li><strong>React Error Boundaries:</strong> Uses an <code>ErrorBoundary</code> to catch errors in components and display a fallback UI (a generic Spinner).</li>
+</ul>
+<h3>Dynamic Icon</h3>
+<ul>
+<li><strong>Flexible Icon Imports:</strong> A generic <code>Icon</code> component dynamically imports icons from <code>react-icons</code> based on the icon set and name.</li>
+<li><strong>Performance Optimizations:</strong> Uses React.lazy, Suspense, and an internal caching mechanism to minimize redundant imports.</li>
+<li><strong>Seamless Styling:</strong> Accepts props for sizing, styling, and class names to integrate with any styling library.</li>
+</ul>
+<h3>Generic Utilities</h3>
+<ul>
+<li><strong>Common Helpers:</strong> Includes debounce, throttle, deep clone, merge objects, date formatting, query string parsing/building, and UUID generation.</li>
+<li><strong>Lightweight &amp; Dependency-Free:</strong> Designed to work with any library or framework without adding bloat.</li>
+</ul>
+<h3>Developer Experience</h3>
+<ul>
+<li><strong>Modern Tooling:</strong> Built with Vite for fast development and optimized builds.</li>
+<li><strong>Code Quality:</strong> Includes ESLint and Prettier configurations for consistency.</li>
+<li><strong>Path Aliasing:</strong> Configured via <code>jsconfig.json</code> for a clean, maintainable import structure.</li>
+<li><strong>Comprehensive Examples:</strong> Sample code throughout the project helps you get started quickly.</li>
+</ul>
+<h2>Getting Started</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li><strong>Bun:</strong> Ensure you have Bun installed. Visit <a href="https://bun.sh">Bun's official website</a> for installation instructions.</li>
+<li><strong>(Optional) Node.js:</strong> While Bun handles most tasks, Node.js may be useful in certain scenarios.</li>
+</ul>
+<h3>Installation</h3>
+<h4>Clone the repository</h4>
+<pre class="prettyprint source lang-bash"><code>git clone &lt;repository-url>
+cd BunForge
+</code></pre>
+<h4>Install dependencies</h4>
+<pre class="prettyprint source lang-bash"><code>bun i
+</code></pre>
+<p><strong>Configure Environment Variables:</strong> Create a local environment file and modify the variables as needed (e.g., Sentry DSN, logging type, file paths).</p>
+<h2>Running the Project</h2>
+<p>Development Server:</p>
+<pre class="prettyprint source lang-bash"><code>bun run dev
+</code></pre>
+<p>Open your browser at <a href="http://localhost:3000">localhost</a></p>
+<p>Production Build:</p>
+<pre class="prettyprint source lang-bash"><code>bun run build
+</code></pre>
+<p>Preview the build with:</p>
+<pre class="prettyprint source lang-bash"><code>bun run preview
+</code></pre>
+<h3>Logging</h3>
+<p>Import and use the Logger service as follows:</p>
+<pre class="prettyprint source lang-js"><code>import Logger from '@/services/logger';
+// Use Vite's environment variables via import.meta.env.
+// Note: If VITE_LOGGER_TYPE is set to &quot;sqlite&quot; in your .env file, SQLite logging is only available on the server.
+// In the browser, it will fall back to console logging.
+const logger = new Logger({ type: import.meta.env.VITE_LOGGER_TYPE || &quot;console&quot; });
+logger.log('info', 'Application started');
+</code></pre>
+<h3>Error Handling</h3>
+<p>Capture errors with ErrorHandler:</p>
+<pre class="prettyprint source lang-js"><code>import Logger from '@/services/logger';
+const logger = new Logger({ type: process.env.VITE_LOGGER_TYPE });
+logger.log('info', 'Application started');
+</code></pre>
+<h3>Dynamic Icon Component</h3>
+<p>Render an icon dynamically:</p>
+<pre class="prettyprint source lang-js"><code>import Icon from '@/components/Icon';
+
+const MyComponent = () => (
+  &lt;div>
+    {/* Renders a FontAwesome beer icon with a size of 32px and orange color */}
+    &lt;Icon iconSet=&quot;fa&quot; iconName=&quot;FaBeer&quot; size={32} style={{ color: 'orange' }} />
+  &lt;/div>
+);
+</code></pre>
+<h3>Utility Functions</h3>
+<p>Use the provided utility functions:</p>
+<pre class="prettyprint source lang-js"><code>import { debounce, throttle, deepClone, generateUUID } from '@/utils';
+
+// Debounce Example:
+const onResize = debounce(() => console.log('Resized!'), 300);
+window.addEventListener('resize', onResize);
+
+// Throttle Example:
+const onScroll = throttle(() => console.log('Scrolling...'), 1000);
+window.addEventListener('scroll', onScroll);
+
+// Deep Clone & UUID Generation:
+const original = { a: 1, b: { c: 2 } };
+const clone = deepClone(original);
+console.log('Clone:', clone);
+console.log('UUID:', generateUUID());
+
+// See /src/utils/index.js for more examples
+</code></pre>
+<h2>Why I Built These Features</h2>
+<p>Performance &amp; Efficiency:
+Leveraging Bun’s built-in file I/O and SQLite support reduces dependencies and speeds up operations.</p>
+<h3>Flexibility</h3>
+<p>Components like Icon are designed to be generic and adaptable, allowing integration with any styling or component library.</p>
+<h3>Robust Error Handling</h3>
+<p>By integrating error boundaries and a dedicated error handling service (with optional Sentry support), the template helps you quickly identify and manage runtime issues.</p>
+<h3>Developer Experience (DX)</h3>
+<p>Modern tooling (Vite, Bun, ESLint, Prettier) and clear code examples ensure a smooth and productive development process.</p>
+<h3>Contributing</h3>
+<p>We welcome contributions from the community! To contribute:</p>
+<h4>Fork the Repository</h4>
+<p>Create your own fork of the project on GitHub.</p>
+<h4>Create a Branch</h4>
+<p>Use a descriptive name for your branch, e.g., feature/new-utility or bugfix/logger-error.</p>
+<h4>Make your Changes</h4>
+<p>Follow the existing code style and include detailed comments and tests when applicable.</p>
+<h4>Submit a Pull Request</h4>
+<p>Open a pull request explaining your changes and the problem they solve. Please ensure your code passes linting and formatting checks.</p>
+<h4>Discussion</h4>
+<p>For major changes or new features, please create a thread in Discussions first to discuss your ideas.</p>
+<p>Your contributions will help improve BunForge and make it a better starting point for your next big idea!</p></article>
+    </section>
+
 
 
 
@@ -56,7 +185,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 15:01:21 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Wed Mar 05 2025 15:24:24 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>

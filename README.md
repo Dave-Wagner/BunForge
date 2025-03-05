@@ -180,6 +180,6 @@ Open a pull request explaining your changes and the problem they solve. Please e
 
 #### Discussion
 
-For major changes or new features, please create a thread in Discussions first to discuss your ideas.
+For major changes or new features, please create a thread in [Discussions](https://github.com/Dave-Wagner/BunForge/discussions) first to discuss your ideas.
 
 Your contributions will help improve BunForge and make it a better starting point for your next big idea!

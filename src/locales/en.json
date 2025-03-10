@@ -1,0 +1,15 @@
+{
+  "error_occurred": "Error Occurred",
+  "title": "Hacker News Explorer",
+  "change_language": "Change Language",
+  "search_articles": "Search Articles",
+  "search_placeholder": "Enter search term...",
+  "loading_articles": "Loading Articles...",
+  "no_title": "No title",
+  "author": "Author",
+  "published": "Published",
+  "no_articles": "No articles found for \"{0}\".",
+  "tech_stack": "Our Technology Stack",
+  "github_link": "Visit our GitHub Repository",
+  "api_data": "Data provided by the Hacker News Algolia API."
+}

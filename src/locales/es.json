@@ -1,0 +1,15 @@
+{
+  "error_occurred": "Ocurrió un error",
+  "title": "Explorador de Hacker News",
+  "change_language": "Cambiar idioma",
+  "search_articles": "Buscar artículos",
+  "search_placeholder": "Ingrese término de búsqueda...",
+  "loading_articles": "Cargando artículos...",
+  "no_title": "Sin título",
+  "author": "Autor",
+  "published": "Publicado",
+  "no_articles": "No se encontraron artículos para \"{0}\".",
+  "tech_stack": "Nuestra pila tecnológica",
+  "github_link": "Visita nuestro repositorio de GitHub",
+  "api_data": "Datos proporcionados por la API de Hacker News Algolia."
+}

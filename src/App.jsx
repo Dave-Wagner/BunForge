@@ -4,7 +4,7 @@ import Logger from "@/services/logger";
 import Icon from "@/components/Icon";
 import { debounce, formatDate, generateUUID } from "@/utils";
 import ErrorBoundary from "@/components/ErrorBoundary";
-import { useI18n } from "@/i18n/useI18n";
+import { useI18n } from "@/hooks/useI18n";
 import "@/styles/index.css";
 
 const newsLogger = new Logger({
